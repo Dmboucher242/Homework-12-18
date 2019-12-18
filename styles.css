@@ -4,5 +4,55 @@
     color: #3D1C00;
     height: 50px;
     text-align: center;
+    border-radius: 12px;
 }
+
+#btn{
+    height: 40px;
+    width: 70px;
+    background-color: olive;
+    color: #3D1C00;
+    border-radius: 12px;
+    border-color: maroon;
+    font-size: 16px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+#start-btn{
+    width: 90px;
+    height: 60px;
+    background-color: #B85B14;
+    color: #3D1C00;
+    border-radius: 12px;
+    margin-top: 90px;
+    margin-left: 90px;
+    border-color: maroon;
+    font-size: 20px;
+
+}
+
+#next-btn{
+    width: 90px;
+    height: 60px;
+    background-color: #B85B14;
+    color: #3D1C00;
+    border-radius: 12px;
+    border-color: maroon;
+    font-size: 20px;
    
+}
+
+.container{
+    width: 400px;
+    height: 300px;
+    margin-top: 90px;
+    margin-left: 300px;
+    background-color: darkslategray;
+}
+.question{
+    margin-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    color: #B85B14;
+}
