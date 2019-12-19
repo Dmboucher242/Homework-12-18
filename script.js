@@ -1,23 +1,38 @@
- const startButton = document.getElementById("start-btn");
+ var startButton = document.getElementById("start-btn");
   startButton.addEventListener("click", startQuiz);
- const questionsContainerElement = document.getElementById("question-container");
- const questionElement = document.getElementById("question");
- const answerButtonsElement = document.getElementById("answer-buttons"); 
- let shuffledQuestion, currentQuestionIndex
+ var questionsContainerElement = document.getElementById("question-container");
+ var questionElement = document.getElementById("question");
+ var answerButtonsElement = document.getElementById("answer-buttons"); 
+ var currentQuestionIndex = 0;
 
 
+
+ 
+ 
+ 
+ 
  function startQuiz(){
      startButton.classList.add("hide");
      questionsContainerElement.classList.remove("hide");
-     shuffledQuestions = questions.sort(() => Math.random() - .5);
      setNextQuestion();
-
+     var count = 15;
+     var interval = setInterval(function(){
+       document.getElementById('count').innerHTML=count;
+       count--;
+       if (count === 0){
+         clearInterval(interval);
+         document.getElementById('count').innerHTML='Done';
+         // or...
+         alert("You're out of time!");
+       }
+     }, 1000);
+     
  }
  function showQuestion(question){
     questionElement.innerText = question.question; 
     question.answers.forEach(answer => {
         const button = document.createElement("button")
-        button.innerText = answer.text
+        button.innerText(answer.text) 
         button.classList.add("btn")
         if (answer.correct){
             button.dataset.correct = answer.correct
@@ -27,8 +42,9 @@
     })
  }
  
+
  function setNextQuestion(){
-    showQuestion(shuffledQuestion[currentQuestionIndex]);
+    
  }
 
 
@@ -42,15 +58,12 @@
 
 
 
-const questions= [
-    {
-        question: "What is my name?",
-        answers: [
-            {text: "Mary", correct: false},
-            {text: "Dyani", correct: true},
-            {text: "Sarah", correct: false},
-            {text: "Kate", correct: false}
-        ]
-    }
-]
-    
+ var questions = [];
+ q1 = {
+ question: "What is my name?",
+ wrong0: "mary",
+ wrong1: "sarah",
+ wrong2: "kate",
+ correct: "dyani"
+ }
+ questions.push(q1)
