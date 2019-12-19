@@ -1,41 +1,46 @@
-var startButton = document.getElementById("start-btn")
-startButton.addEventListener("click", startQuiz)
-var questions = document.getElementById("question-container")
+ const startButton = document.getElementById("start-btn");
+  startButton.addEventListener("click", startQuiz);
+ const questionsContainerElement = document.getElementById("question-container");
+ const questionElement = document.getElementById("question");
+ const answerButtonsElement = document.getElementById("answer-buttons"); 
+ let shuffledQuestion, currentQuestionIndex
+
+
+ function startQuiz(){
+     startButton.classList.add("hide");
+     questionsContainerElement.classList.remove("hide");
+     shuffledQuestions = questions.sort(() => Math.random() - .5);
+     setNextQuestion();
+
+ }
+ function showQuestion(question){
+    questionElement.innerText = question.question; 
+ }
+ 
+ function setNextQuestion(){
+    showQuestion(shuffledQuestion[currentQuestionIndex]);
+ }
+
+
+ function selectAnswer(){
+
+ }
 
 
 
 
-function startQuiz(){
-    console.log("hi");
-
-}
-
-function question1(){
-
-}
-
-function selectAnswer(){
-
-}
 
 
 
-var questions = [
-    { 
-       question1: "which symbol represents an id?",
-       answer: [".", ",", "#", "!"],
-       
-       question2: "",
-       answers2: [""],
-       
-       question3: "",
-       answers3: [""],
-       
-       question4: "",
-       answers4: [""],
-       
-       question5: "",
-       answers5: [""]
+const questions= [
+    {
+        question: "What is my name?",
+        answers: [
+            {text: "Mary", correct: false},
+            {text: "Dyani", correct: true},
+            {text: "Sarah", correct: false},
+            {text: "Kate", correct: false}
+        ]
     }
 ]
-
+    

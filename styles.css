@@ -7,16 +7,16 @@
     border-radius: 12px;
 }
 
-#btn{
+.btn{
     height: 40px;
-    width: 70px;
+    width: 80%;
     background-color: olive;
     color: #3D1C00;
     border-radius: 12px;
     border-color: maroon;
     font-size: 16px;
-    margin-top: 60px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
 }
 
 #start-btn{
@@ -25,10 +25,11 @@
     background-color: #B85B14;
     color: #3D1C00;
     border-radius: 12px;
-    margin-top: 90px;
+    margin-top: 40px;
     margin-left: 90px;
     border-color: maroon;
     font-size: 20px;
+    font-weight: bold;
 
 }
 
@@ -40,19 +41,33 @@
     border-radius: 12px;
     border-color: maroon;
     font-size: 20px;
+    font-weight: bold;
    
 }
 
 .container{
     width: 400px;
-    height: 300px;
+    height: 400px;
     margin-top: 90px;
     margin-left: 300px;
     background-color: darkslategray;
 }
-.question{
+#question{
     margin-left: 20px;
-    padding-top: 20px;
+    padding-top: 30px;
     font-size: 20px;
     color: #B85B14;
+    margin-bottom: 20px;
+}
+
+.btn-grid{
+    display: grid;
+
+}
+.btn:hover{
+    border-color: yellow;
+}
+
+.hide{
+    display: none;
 }
